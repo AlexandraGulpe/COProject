@@ -32,7 +32,7 @@ public class HelloController {
 
 
     @FXML
-    public void launchButtonOnAction(ActionEvent event){
+    public void launchButtonOnAction(ActionEvent event) throws Exception{
        //System.out.println(HelloApplication.class.getClassLoader().getResource("bbpLaunch.fxml"));
         String s = choiceBox.getValue();
         if(s.equals("Bailey-Borwein-Plouffe")){
@@ -43,18 +43,12 @@ public class HelloController {
             s = "monteCarloLaunch.fxml";
         }
         URL adr = HelloApplication.class.getClassLoader().getResource(s);
-        try {
+       
 
-            Parent root = FXMLLoader.load(adr);
-            Stage window = (Stage) launchButton.getScene().getWindow();
-            window.setScene(new Scene(root,1300,800));
-        } catch (IOException e) {
-            //e.printStackTrace();
-            System.out.println(e.getMessage());
-            System.out.println(e.getCause());
-            System.out.println(e);
-            System.out.println(adr);
-        }
+        Parent root = FXMLLoader.load(adr);
+        Stage window = (Stage) launchButton.getScene().getWindow();
+        window.setScene(new Scene(root,1300,800));
+
     }
 
     @FXML

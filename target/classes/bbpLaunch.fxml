@@ -2,9 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coproject.bbpPageController" stylesheets="@bbpPage.css">
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" stylesheets="@bbpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coproject.bbpPageController">
    <children>
-      <Button layoutX="354.0" layoutY="272.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="cancelButton" layoutX="211.0" layoutY="442.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #ECF674;" text="CANCEL" textFill="#262632">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -29,6 +29,6 @@
          </font>
       </Button>
       <ChoiceBox fx:id="speedChoiceBox" layoutX="149.0" layoutY="302.0" prefHeight="34.0" prefWidth="215.0" />
-      <ChoiceBox fx:id="choiceBox" layoutX="192.0" layoutY="190.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBox" layoutX="149.0" layoutY="179.0" prefHeight="34.0" prefWidth="215.0" />
    </children>
 </AnchorPane>
