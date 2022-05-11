@@ -10,7 +10,7 @@ public class HelloApplication extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("hello-view.fxml"));
         Scene scene = new Scene(root, 1300, 800);
 
         primaryStage.setTitle("SpaceX");
