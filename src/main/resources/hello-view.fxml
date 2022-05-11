@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coproject.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coproject.HelloController">
    <children>
       <Label layoutX="139.0" layoutY="51.0" text="Welcome to SpaceX" textFill="#262632">
          <font>
@@ -18,7 +18,6 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="choiceBox" layoutX="149.0" layoutY="163.0" prefHeight="34.0" prefWidth="215.0" />
       <Label layoutX="125.0" layoutY="259.0" text="Please enter launch speed" textFill="#262632">
          <font>
             <Font size="24.0" />
@@ -30,5 +29,6 @@
          </font>
       </Button>
       <ChoiceBox fx:id="speedChoiceBox" layoutX="149.0" layoutY="302.0" prefHeight="34.0" prefWidth="215.0" />
+      <ChoiceBox fx:id="choiceBox" layoutX="149.0" layoutY="179.0" prefHeight="34.0" prefWidth="215.0" />
    </children>
 </AnchorPane>

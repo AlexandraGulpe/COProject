@@ -1,0 +1,4 @@
+.root{
+    -fx-background-image:url('monteCarlo.png');
+    -fx-background-size: stretch;
+}

@@ -8,13 +8,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import javafx.event.ActionEvent;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
+import javafx.scene.control.*;
+
+public class HelloController {
     @FXML
     private ChoiceBox<String> choiceBox;
 
@@ -28,21 +31,35 @@ public class HelloController implements Initializable {
     private String[] stressChoice = {"50", "100", "200", "500", "1000", "2000", "5000"};
 
 
-
+    @FXML
     public void launchButtonOnAction(ActionEvent event) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("bbpLaunch.fxml"));
+       //System.out.println(HelloApplication.class.getClassLoader().getResource("bbpLaunch.fxml"));
+        String s = choiceBox.getValue();
+        if(s.equals("Bailey-Borwein-Plouffe")){
+            s = "bbpLaunch.fxml";
+        }else if(s.equals("Spigot")){
+            s = "spigotLaunch.fxml";
+        }else if(s.equals("Monte Carlo")){
+            s = "monteCarloLaunch.fxml";
+        }
+        URL adr = HelloApplication.class.getClassLoader().getResource(s);
+       
 
+        Parent root = FXMLLoader.load(adr);
         Stage window = (Stage) launchButton.getScene().getWindow();
         window.setScene(new Scene(root,1300,800));
 
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    @FXML
+    public void initialize() {
         choiceBox.getItems().addAll(algorithmsName);
-        //speedChoiceBox.getItems().addAll(stressChoice);
+
+        speedChoiceBox.getItems().addAll(stressChoice);
 
     }
+
+
 
 
 

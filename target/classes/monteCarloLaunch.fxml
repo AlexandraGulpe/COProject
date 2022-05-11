@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" stylesheets="@monteCarloPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coproject.monteCarloPageController">
+   <children>
+      <Button fx:id="cancelButton" layoutX="221.0" layoutY="452.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #ECF674;" text="CANCEL" textFill="#262632">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
