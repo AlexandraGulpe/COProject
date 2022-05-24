@@ -28,7 +28,7 @@ public class HelloController {
     private Button launchButton;
 
     private String[] algorithmsName = {"Bailey-Borwein-Plouffe", "Spigot", "Monte Carlo"};
-    private String[] stressChoice = {"50", "100", "200", "500", "1000", "2000", "5000"};
+    private static String[] stressChoice = {"50", "100", "200", "500", "1000", "2000", "5000"};
 
 
     @FXML
@@ -43,8 +43,7 @@ public class HelloController {
             s = "monteCarloLaunch.fxml";
         }
         URL adr = HelloApplication.class.getClassLoader().getResource(s);
-       
-
+        MyChoice.setValue(speedChoiceBox.getValue());
         Parent root = FXMLLoader.load(adr);
         Stage window = (Stage) launchButton.getScene().getWindow();
         window.setScene(new Scene(root,1300,800));
@@ -54,10 +53,10 @@ public class HelloController {
     @FXML
     public void initialize() {
         choiceBox.getItems().addAll(algorithmsName);
-
         speedChoiceBox.getItems().addAll(stressChoice);
-
     }
+
+
 
 
 
