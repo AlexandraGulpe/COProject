@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1300.0" stylesheets="@bbpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coproject.bbpPageController">
    <children>
-      <Button fx:id="cancelButton" layoutX="211.0" layoutY="442.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #ECF674;" text="CANCEL" textFill="#262632">
+      <Button fx:id="cancelButton" layoutX="201.0" layoutY="432.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #ECF674;" text="CANCEL" textFill="#262632">
          <font>
             <Font size="18.0" />
          </font>
