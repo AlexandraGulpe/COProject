@@ -27,7 +27,7 @@ public class HelloController {
     @FXML
     private Button launchButton;
 
-    private String[] algorithmsName = {"Bailey-Borwein-Plouffe", "Spigot", "Monte Carlo"};
+    private String[] algorithmsName = {"Bailey-Borwein-Plouffe", "Spigot", "Leibnitz"};
     private String[] stressChoice = {"50", "100", "200", "500", "1000", "2000", "5000"};
 
 
@@ -39,8 +39,8 @@ public class HelloController {
             s = "bbpLaunch.fxml";
         }else if(s.equals("Spigot")){
             s = "spigotLaunch.fxml";
-        }else if(s.equals("Monte Carlo")){
-            s = "monteCarloLaunch.fxml";
+        }else if(s.equals("Leibnitz")){
+            s = "leibnitzLaunch.fxml";
         }
         URL adr = HelloApplication.class.getClassLoader().getResource(s);
        

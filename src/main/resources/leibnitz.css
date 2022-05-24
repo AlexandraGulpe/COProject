@@ -1,0 +1,4 @@
+.root{
+    -fx-background-image:url('leibnitz.png');
+    -fx-background-size: stretch;
+}
