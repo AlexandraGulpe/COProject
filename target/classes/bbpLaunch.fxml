@@ -14,11 +14,11 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label fx:id="resultsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="110.0" layoutY="230.0" prefHeight="107.0" prefWidth="318.0" text="Label" textFill="#262632">
+      <Label fx:id="resultsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="149.0" prefHeight="69.0" prefWidth="350.0" text="Label" textFill="#262632">
          <font>
             <Font name="System Bold Italic" size="25.0" />
          </font></Label>
-      <Label layoutX="60.0" layoutY="115.0" prefHeight="58.0" prefWidth="454.0" text="You obtained the impressive score of:" textFill="#262632">
+      <Label layoutX="70.0" layoutY="60.0" prefHeight="106.0" prefWidth="518.0" text="You obtained the impressive score of:" textFill="#262632">
          <font>
             <Font name="System Bold Italic" size="25.0" />
          </font>
@@ -28,5 +28,15 @@
             <Image url="@elonpic.png" />
          </image>
       </ImageView>
+      <Label layoutX="70.0" layoutY="236.0" prefHeight="61.0" prefWidth="413.0" text="The average score for this input is:" textFill="#262632">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="averageLabel" alignment="CENTER" layoutX="64.0" layoutY="318.0" prefHeight="61.0" prefWidth="361.0" text="Label">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

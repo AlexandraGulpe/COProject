@@ -9,24 +9,34 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1300.0" stylesheets="@spigotPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coproject.spigotPageController">
    <children>
-      <Button fx:id="cancelButton" layoutX="201.0" layoutY="432.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #ECF674;" text="CANCEL" textFill="#262632">
+      <Button fx:id="cancelButton" layoutX="201.0" layoutY="432.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: #ECF674;" text="BACK" textFill="#262632">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Label fx:id="resultsLabel" layoutX="26.0" layoutY="137.0" prefHeight="76.0" prefWidth="350.0" text="Label" textFill="#2b7b32">
+      <Label fx:id="resultsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="128.0" prefHeight="76.0" prefWidth="350.0" text="Label" textFill="#262632">
          <font>
             <Font name="System Bold Italic" size="25.0" />
          </font></Label>
-      <Label layoutX="26.0" layoutY="31.0" prefHeight="106.0" prefWidth="518.0" text="You obtained the impressive result of:" textFill="#2b7b32">
+      <Label layoutX="60.0" layoutY="31.0" prefHeight="106.0" prefWidth="518.0" text="You obtained the impressive result of:" textFill="#262632">
          <font>
             <Font name="System Bold Italic" size="25.0" />
          </font>
       </Label>
-      <ImageView fitHeight="206.0" fitWidth="382.0" layoutX="69.0" layoutY="553.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="250.0" fitWidth="382.0" layoutX="130.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@elon2.jpg" />
+            <Image url="@elonpic2.png" />
          </image>
       </ImageView>
+      <Label layoutX="50.0" layoutY="204.0" prefHeight="90.0" prefWidth="437.0" text="The average score for this input is:" textFill="#262632">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="averageLabel" alignment="CENTER" layoutX="153.0" layoutY="301.0" prefHeight="76.0" prefWidth="203.0" text="Label" textFill="#262632">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
