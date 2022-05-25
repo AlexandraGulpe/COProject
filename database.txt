@@ -24,3 +24,15 @@
 2022/05/25 21:08:26 Bailey-Borwein-Plouffe 1000  59.47 
 2022/05/25 21:08:38 Bailey-Borwein-Plouffe 2000  75.19 
 2022/05/25 21:10:14 Spigot 5000  7.75 
+2022/05/25 23:08:34 Bailey-Borwein-Plouffe 5000  70.92 
+2022/05/25 17:18:13 Bailey-Borwein-Plouffe 500  41.02 
+2022/05/25 20:10:17 Leibnitz 50  101.70 
+2022/05/25 20:10:50 Spigot 1000  37.21 
+2022/05/25 20:27:10 Spigot 200  68.46 
+2022/05/25 21:04:21 Bailey-Borwein-Plouffe 200  30.55 
+2022/05/25 21:05:58 Spigot 2000  19.81 
+2022/05/25 21:07:44 Leibnitz 5000  253.80 
+2022/05/25 21:08:26 Bailey-Borwein-Plouffe 1000  59.47 
+2022/05/25 21:08:38 Bailey-Borwein-Plouffe 2000  75.19 
+2022/05/25 21:10:14 Spigot 5000  7.75 
+2022/05/25 23:26:18 Bailey-Borwein-Plouffe 50  27.76 

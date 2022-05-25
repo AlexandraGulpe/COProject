@@ -34,23 +34,28 @@ public class HelloController {
     @FXML
     public void launchButtonOnAction(ActionEvent event) throws Exception{
        //System.out.println(HelloApplication.class.getClassLoader().getResource("bbpLaunch.fxml"));
-        String s = choiceBox.getValue();
-        if(s.equals("Bailey-Borwein-Plouffe")){
-            s = "bbpLaunch.fxml";
-        }else if(s.equals("Spigot")){
-            s = "spigotLaunch.fxml";
-        }else if(s.equals("Leibnitz")){
-            s = "leibnitzLaunch.fxml";
-        }
-        URL adr = HelloApplication.class.getClassLoader().getResource(s);
-        String algoChoice = choiceBox.getValue();
-        String speedChoice = speedChoiceBox.getValue();
-        if(algoChoice!=null  && speedChoice!=null) {
-            MyChoice.setAlgoChoice(choiceBox.getValue());
-            MyChoice.setValue(speedChoiceBox.getValue());
-            Parent root = FXMLLoader.load(adr);
-            Stage window = (Stage) launchButton.getScene().getWindow();
-            window.setScene(new Scene(root, 1300, 800));
+        try{
+            String s = choiceBox.getValue();
+            if(s.equals("Bailey-Borwein-Plouffe")){
+                s = "bbpLaunch.fxml";
+            }else if(s.equals("Spigot")){
+                s = "spigotLaunch.fxml";
+            }else if(s.equals("Leibnitz")){
+                s = "leibnitzLaunch.fxml";
+            }
+            else throw new Exception();
+            URL adr = HelloApplication.class.getClassLoader().getResource(s);
+            String algoChoice = choiceBox.getValue();
+            String speedChoice = speedChoiceBox.getValue();
+            if (algoChoice != null && speedChoice != null) {
+                MyChoice.setAlgoChoice(choiceBox.getValue());
+                MyChoice.setValue(speedChoiceBox.getValue());
+                Parent root = FXMLLoader.load(adr);
+                Stage window = (Stage) launchButton.getScene().getWindow();
+                window.setScene(new Scene(root, 1300, 800));
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
         }
 
     }
