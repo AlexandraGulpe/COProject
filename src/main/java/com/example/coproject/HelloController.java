@@ -43,12 +43,15 @@ public class HelloController {
             s = "leibnitzLaunch.fxml";
         }
         URL adr = HelloApplication.class.getClassLoader().getResource(s);
-       
-        MyChoice.setAlgoChoice(choiceBox.getValue());
-        MyChoice.setValue(speedChoiceBox.getValue());
-        Parent root = FXMLLoader.load(adr);
-        Stage window = (Stage) launchButton.getScene().getWindow();
-        window.setScene(new Scene(root,1300,800));
+        String algoChoice = choiceBox.getValue();
+        String speedChoice = speedChoiceBox.getValue();
+        if(algoChoice!=null  && speedChoice!=null) {
+            MyChoice.setAlgoChoice(choiceBox.getValue());
+            MyChoice.setValue(speedChoiceBox.getValue());
+            Parent root = FXMLLoader.load(adr);
+            Stage window = (Stage) launchButton.getScene().getWindow();
+            window.setScene(new Scene(root, 1300, 800));
+        }
 
     }
 

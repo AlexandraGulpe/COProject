@@ -19,6 +19,9 @@ public class spigotPageController {
     @FXML
     private Label resultsLabel;
 
+    @FXML
+    private Label averageLabel;
+
     public void cancelButtonOnAction(ActionEvent event) throws Exception {
         URL adr = HelloApplication.class.getClassLoader().getResource("hello-view.fxml");
         Parent root = FXMLLoader.load(adr);
@@ -33,5 +36,6 @@ public class spigotPageController {
         String resultsAsString = TestCpuDigitsOfPi.getResults(launchSpeed, algoChoice);
         resultsLabel.setText(resultsAsString);
         StoreService.appendData(algoChoice,launchSpeed, resultsAsString);
+        averageLabel.setText(OurAverages.getAverages(launchSpeed,algoChoice));
     }
 }

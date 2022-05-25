@@ -19,6 +19,10 @@ public class bbpPageController {
     private Button cancelButton;
 
     @FXML
+    private Label averageLabel;
+
+
+    @FXML
     private Label resultsLabel;
 
     public void cancelButtonOnAction(ActionEvent event) throws Exception {
@@ -36,6 +40,7 @@ public class bbpPageController {
         String resultAsString = TestCpuDigitsOfPi.getResults(launchSpeed, algoChoice);
         resultsLabel.setText(resultAsString);
         StoreService.appendData(algoChoice,launchSpeed,resultAsString);
+        averageLabel.setText(OurAverages.getAverages(launchSpeed,algoChoice));
     }
 
 

@@ -17,6 +17,9 @@ public class LeibnitzPageController {
     private Button cancelButton;
 
     @FXML
+    private Label averageLabel;
+
+    @FXML
     private Label resultsLabel;
 
     public void cancelButtonOnAction(ActionEvent event) throws Exception {
@@ -34,5 +37,6 @@ public class LeibnitzPageController {
         String resultsAsString = TestCpuDigitsOfPi.getResults(launchSpeed, algoChoice);
         resultsLabel.setText(resultsAsString);
         StoreService.appendData(algoChoice, launchSpeed, resultsAsString);
+        averageLabel.setText(OurAverages.getAverages(launchSpeed,algoChoice));
     }
 }
