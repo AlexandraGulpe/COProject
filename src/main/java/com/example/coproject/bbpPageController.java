@@ -32,8 +32,10 @@ public class bbpPageController {
     @FXML
     public void initialize(){
         int launchSpeed = Integer.parseInt(MyChoice.getValue());
-        int algoSpeed = Integer.parseInt(MyChoice.getAlgoChoice());
-        resultsLabel.setText(TestCpuDigitsOfPi.getResults(launchSpeed, algoSpeed));
+        int algoChoice = Integer.parseInt(MyChoice.getAlgoChoice());
+        String resultAsString = TestCpuDigitsOfPi.getResults(launchSpeed, algoChoice);
+        resultsLabel.setText(resultAsString);
+        StoreService.appendData(algoChoice,launchSpeed,resultAsString);
     }
 
 
