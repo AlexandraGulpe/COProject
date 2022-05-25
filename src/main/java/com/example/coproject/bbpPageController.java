@@ -33,7 +33,7 @@ public class bbpPageController {
     public void initialize(){
         int launchSpeed = Integer.parseInt(MyChoice.getValue());
         int algoSpeed = Integer.parseInt(MyChoice.getAlgoChoice());
-        resultsLabel.setText("Congratulations, your CPU obtained a score of: " + TestCpuDigitsOfPi.getResults(launchSpeed, algoSpeed));
+        resultsLabel.setText(TestCpuDigitsOfPi.getResults(launchSpeed, algoSpeed));
     }
 
 
