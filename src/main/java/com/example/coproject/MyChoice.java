@@ -8,7 +8,8 @@ public class MyChoice {
         return switch (algoChoice) {
             case "Bailey-Borwein-Plouffe" -> "1";
             case "Spigot" -> "2";
-            default -> "3";
+            case "Leibnitz" -> "3";
+            default -> "none";
         };
     }
 
