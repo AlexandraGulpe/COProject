@@ -13,43 +13,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestCpuDigitsOfPi  {
-    public static String getResults(){
+    public static String getResults(int stressLevel, int choice){
+        //stress Level shall be 50, 100, 200, 500, 1000, 2000, 5000
+        // choice shall be 1- BBP, 2-Spigot, 3-Leibnitz
+
         CPUDigitsOfPi digitsCalc=new CPUDigitsOfPi();
         ITimer myNewTimer=new Timer();
-        ILogger myNewLogger=new ConsoleLogger();
-        Units myUnits=Units.Sec;
-
-
-        List<String> optionsList = new ArrayList<>();
-        optionsList.add("BBP Algo");
-        optionsList.add("Spigot Algo");
-        optionsList.add("Leibnitz Algo");
-
-        int yourOption = 1 ;
         digitsCalc.warmUp();
-        Integer[] stressArray = {50, 100, 200, 500, 1000, 2000, 5000};
         String scores = "";
-        for (var it:stressArray) {
-            myNewTimer.start();
-            digitsCalc.run(it,yourOption);
-            long timeOne = myNewTimer.stop();
-            String optionInResult = null;
-            switch(yourOption){
-                case 1 -> optionInResult = "BBP Algo";
-
-                case 2 -> optionInResult = "Spigot Algo";
-
-                case 3 -> optionInResult = "Leibnitz Algo";
-
-                default -> optionInResult = "no algo";
-            }
-//            optionInResult += " "+it + " stress level, time = ";
-//            myNewLogger.writeTime(optionInResult, timeOne, myUnits);
-//            myNewLogger.write("and score of: "+ digitsCalc.getScore(it, timeOne));
-            scores += " " + digitsCalc.getScore(it,timeOne);
+        myNewTimer.start();
+        digitsCalc.run(stressLevel,choice);
+        long timeOne = myNewTimer.stop();
+        String optionInResult = null;
+        double scoreObtained = digitsCalc.getScore(stressLevel,timeOne);
+        scores += " " + String.format("%.2f", scoreObtained);
+        return scores;
         }
 
-        return scores;
 
     }
-}

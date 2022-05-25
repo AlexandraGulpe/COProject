@@ -44,6 +44,7 @@ public class HelloController {
         }
         URL adr = HelloApplication.class.getClassLoader().getResource(s);
         MyChoice.setValue(speedChoiceBox.getValue());
+        MyChoice.setAlgoChoice(choiceBox.getValue());
         Parent root = FXMLLoader.load(adr);
         Stage window = (Stage) launchButton.getScene().getWindow();
         window.setScene(new Scene(root,1300,800));
