@@ -30,5 +30,10 @@
       </Button>
       <ChoiceBox fx:id="speedChoiceBox" layoutX="149.0" layoutY="302.0" prefHeight="34.0" prefWidth="215.0" />
       <ChoiceBox fx:id="choiceBox" layoutX="149.0" layoutY="179.0" prefHeight="34.0" prefWidth="215.0" />
+      <Label fx:id="attentionLabel" layoutX="73.0" layoutY="370.0" prefHeight="46.0" prefWidth="366.0" textFill="#f4420c">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
