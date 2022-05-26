@@ -25,6 +25,9 @@ public class HelloController {
     private ChoiceBox<String> speedChoiceBox;
 
     @FXML
+    private Label attentionLabel;
+
+    @FXML
     private Button launchButton;
 
     private String[] algorithmsName = {"Bailey-Borwein-Plouffe", "Spigot", "Leibnitz"};
@@ -54,8 +57,9 @@ public class HelloController {
                 Stage window = (Stage) launchButton.getScene().getWindow();
                 window.setScene(new Scene(root, 1300, 800));
             }
+            else throw new Exception();
         }catch(Exception e){
-            System.out.println(e.getMessage());
+            attentionLabel.setText("You have to select both fields!");
         }
 
     }
